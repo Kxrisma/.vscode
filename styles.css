@@ -1,0 +1,133 @@
+:root {
+  --color-principal: #004b87;
+  --color-secundario: #ffcc00;
+  --color-fondo: #f4f4f4;
+  --color-texto: #333;
+  --espaciado: 1.5rem;
+  --ancho-max: 1200px;
+  --fuente: 'Segoe UI', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: var(--ancho-max);
+  margin: auto;
+}
+
+header {
+  background-color: var(--color-principal);
+  color: white;
+  padding: var(--espaciado) 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  background-color: var(--color-secundario);
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.hero h2 {
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: var(--color-principal);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.productos {
+  padding: 2rem 0;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.producto {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.producto a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--color-principal);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #222;
+  color: #ccc;
+  padding: var(--espaciado) 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer-content {
+    text-align: center;
+  }
+}
